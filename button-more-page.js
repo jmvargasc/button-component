@@ -7,30 +7,29 @@ export class ButtonMorePage extends LitElement {
 
   static styles = [
     css`
-        .container{
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-items: end;
+        .container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
-        .btn-more{
-            margin: 1rem;
-            padding: .4rem;
-            background-color: #576597;
-            color: #000000;
-            border: 2px solid #000B34;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 1m;
-        }
-        .btn-more:hover{
-          background-color: #ffffff;
-          color: #000000;
-          border: 3px solid #000000;
+        .btn-more {
+          margin: 1rem;
+          padding: 10px;
+          background: linear-gradient(135deg, #162236 0%, #4f84e0 100%);
+          color: #ffffff;
+          border: none;
+          font-weight: bold;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background 0.4s ease, transform 0.4s ease;
+      }
+        .btn-more:hover {
+          background: linear-gradient(135deg, rgb(37 54 77) 0%, rgb(134 170 217) 100%);
+          transform: scale(1.05);
         }
     `
-];
-
+  ];
 
   constructor() {
     super();
@@ -42,7 +41,6 @@ export class ButtonMorePage extends LitElement {
         <div class="container">
             <button class="btn-more">${this.texto}</button>
         </div>
-
     `;
   }
 }
